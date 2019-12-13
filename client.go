@@ -84,7 +84,8 @@ func (s *SentryClient) GetAccessToken(clientID, responseType, redirectUrl string
 		"%s?client_id=%s&response_type=%s&redirect_uri=%s&scopes=public&state=xyz",
 		authorizeUrl,
 		clientID,
-		responseType)
+		responseType,
+		redirectUrl)
 
 	req, err := http.NewRequest("GET", reqUrl, nil)
 
